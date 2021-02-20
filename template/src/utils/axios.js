@@ -11,12 +11,15 @@ axios.defaults.baseURL = '/xxx'
 // data is only applicable for request methods 'PUT', 'POST', and 'PATCH'
 axios.defaults.transformRequest = (data, header) => qs.stringify(data)
 
-axios.interceptors.request.use(config => config, error => Promise.reject(error))
+axios.interceptors.request.use(
+  (config) => config,
+  (error) => Promise.reject(error)
+)
 
 axios.interceptors.response.use(
-  response => response.data,
+  (response) => response.data,
 
-  error => {
+  (error) => {
     console.error('ERROR', error)
 
     if (error.message) {

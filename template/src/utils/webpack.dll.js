@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const dllPath = path.resolve(__dirname, '../assets/dll')
 
-const dllPackages = ['qs', 'axios', 'react', 'react-dom']
+const dllPackages = ['react', 'react-dom', 'react-router-dom']
 
 module.exports = {
   mode: 'production',
