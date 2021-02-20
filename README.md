@@ -4,3 +4,9 @@
 
 `react`, `react-router`, `mobx`, `webpack.DllPlugin`, `antd`...
 
+```sh
+  $ npx create-react-app my-app --scripts-version ltns-react-scripts --template cra-template-ltns
+  $ cd my-app
+  $ npm start
+```
+
