@@ -1,17 +1,25 @@
 {
   "name": "cra-template-ltns",
   "version": "0.1.0",
-  "private": true,
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template"
+  ],
+  "description": "The custom template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willltns/cra-template-ltns.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/willltns/cra-template-ltns/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
 }
