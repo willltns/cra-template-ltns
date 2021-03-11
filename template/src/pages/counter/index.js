@@ -14,21 +14,29 @@ function Counter() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <button onClick={counter.increase}>increase</button>
         <Observer
           render={() => (
-            <div>
-              <p>count: {counter.count}</p>
-              <p>squareOfCount: {counter.squareOfCount}</p>
-            </div>
+            <>
+              <div>
+                <button onClick={counter.increase}>increase</button>
+                &nbsp;
+                <button style={{ width: 100 }} disabled={counter.loading} onClick={counter.incAfter2Sec}>
+                  {counter.loading ? '...' : 'inc after 2 sec'}
+                </button>
+              </div>
+              <div>
+                <p>count: {counter.count}</p>
+                <p>squareOfCount: {counter.squareOfCount}</p>
+              </div>
+            </>
           )}
         />
+
+        <Link to="/about">To About</Link>
 
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
-
-        <Link to="/about">To About</Link>
       </header>
     </div>
   )

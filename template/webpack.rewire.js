@@ -87,16 +87,13 @@ module.exports = function (defaultConfig, webpackEnv) {
   const babelLoader = oneOfList.find((rule) => rule.include && rule.loader && rule.loader.includes('babel-loader'))
   const babelOptions = babelLoader.options
 
-  // Optional Chaining (foo?.bar)
-  babelOptions.plugins.push(require.resolve('@babel/plugin-proposal-optional-chaining'))
-
   // Dynamic Imports (Code splitting)
   babelOptions.plugins.push(require.resolve('@babel/plugin-syntax-dynamic-import'))
 
   // Modular import 'antd'
   // babelOptions.plugins.push([
-  //     require.resolve('babel-plugin-import'),
-  //     { libraryName: 'antd', libraryDirectory: 'es', style: true },
+  //   require.resolve('babel-plugin-import'),
+  //   { libraryName: 'antd', libraryDirectory: 'es', style: true },
   // ])
 
   // htmlWebpackPlugin instance, adding filename as property, and trying to use it in index.html.

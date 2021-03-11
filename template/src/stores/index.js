@@ -7,6 +7,7 @@ req.keys().forEach((path) => {
     const StoreClass = req(path)[key]
     const subStoreKey = key[0].toLowerCase() + key.slice(1, -5)
     if (rootStore[subStoreKey]) throw new Error(`SubStore '${subStoreKey}' has already been declared`)
+    StoreClass.prototype.getRoot = () => rootStore
     rootStore[subStoreKey] = new StoreClass()
   })
 })
